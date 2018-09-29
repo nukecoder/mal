@@ -1,0 +1,31 @@
+<job id="MakeALisp">
+  <script language="VBScript">	
+    Function READ(x)
+      READ = x
+    End Function
+
+    Function EVAL(x)
+      EVAL = x
+    End Function
+
+    Function PRINT(x)
+      PRINT = x
+    End Function
+
+    Function rep(x)
+      rep = print(eval (read(x)))
+    End Function
+
+    Sub Main
+      Do While True
+        Wscript.StdOut.Write("user> ")
+        if Wscript.StdIn.AtEndOfStream then
+          exit sub
+        end if
+        Wscript.StdOut.WriteLine(rep(WScript.StdIn.ReadLine))
+      Loop
+    End Sub
+    
+    Main
+  </script>
+</job>
